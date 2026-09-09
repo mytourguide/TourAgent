@@ -1,0 +1,23 @@
+# env
+.env
+.env.local
+.env.*.local
+
+# node
+node_modules/
+.next/
+out/
+dist/
+
+# go
+backend/*.log
+backend/vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
