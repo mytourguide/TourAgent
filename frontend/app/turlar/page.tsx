@@ -24,7 +24,7 @@ export default async function Turlar() {
         ))}
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {dummy.map(t=> <TourCard key={t.slug} title={t.title} slug={t.slug} location={t.location} days={t.duration_days||t.days||3} price={t.base_price||t.price||0} image={t.cover_image||t.image||""} />)}
+        {dummy.map(t=> <TourCard key={t.slug} title={t.title} slug={t.slug} location={t.location} days={t.duration_days ?? 3} price={t.base_price ?? 0} image={t.cover_image ?? ""} />)}
       </div>
     </main>
   );
