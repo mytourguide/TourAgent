@@ -1,6 +1,13 @@
 import ImageSlider from "@/components/ImageSlider";
 import { apiFetch } from "@/lib/api";
 import { Metadata } from "next";
+export async function generateStaticParams() {
+  return [
+    { slug: 'fethiye-12-adalar' },
+    { slug: 'kapadokya-balon' },
+    { slug: 'antalya-kultur' },
+  ];
+}
 export async function generateMetadata({params}:{params:{slug:string}}):Promise<Metadata>{
   return {title:`Tur - ${params.slug}`, description:`${params.slug} tur detayları`};
 }
