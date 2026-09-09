@@ -5,9 +5,6 @@ export const metadata = { title: "Seyahat Acentası", description: "Modern tur r
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="tr">
-      <head>
-        <script src="https://cdn.tailwindcss.com"></script>
-      </head>
       <body>
         <Header />
         {children}
