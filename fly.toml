@@ -1,0 +1,21 @@
+app = "travel-api"
+primary_region = "iad"
+
+[build]
+  dockerfile = "backend/Dockerfile"
+
+[env]
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines = 0
+  processes = ["app"]
+
+[[vm]]
+  memory = "256"
+  cpu_kind = "shared"
+  cpus = 1
+  size = "shared-1x"
