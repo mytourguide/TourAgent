@@ -1,5 +1,7 @@
 FROM golang:1.22-alpine AS build
 WORKDIR /app
+# cache buster
+RUN echo "build-$(date +%s)"
 COPY go.mod go.sum ./
 COPY vendor/ vendor/
 COPY . .
