@@ -1,9 +1,9 @@
 FROM golang:1.22-alpine AS build
 WORKDIR /app
 COPY go.mod go.sum ./
-RUN go mod download
+COPY vendor/ vendor/
 COPY . .
-RUN go build -o /app/api ./cmd/api
+RUN GOFLAGS=-mod=vendor go build -o /app/api ./cmd/api
 
 FROM alpine:latest
 WORKDIR /app
